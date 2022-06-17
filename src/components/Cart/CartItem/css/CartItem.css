@@ -1,0 +1,14 @@
+.cart {
+    border: 1px solid gray;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+span{
+    font-weight: 600;
+    font-size: 16px;
+}
+img{
+    width: 80px;
+    margin-right: 10px;
+}

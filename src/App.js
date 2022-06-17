@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { useState, createContext } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import ItemList from './components/ItemList/ItemList';
 
+export const cartData = createContext()
 function App() {
+  const [cartProducts, setCartProducts] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <cartData.Provider value={[cartProducts, setCartProducts]} >
+        <Header/>
+        <ItemList />
+      </cartData.Provider>
     </div>
   );
 }
